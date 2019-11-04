@@ -24,7 +24,7 @@ ts_season <- function(x, plot = TRUE, random = TRUE) {
          fecha <- 1:length(x$trend.series),
          fecha <- seq.Date(from = a, to = b, length.out = length(x$trend.series)))
 
-  m <- t(matrix(data = x$detrended.series), nrow = x$order)
+  m <- t(matrix(data = x$detrended.series, nrow = x$order))
   seas <- colMeans(m, na.rm = TRUE)
   seas <- rep_len(seas, length.out = length(x$detrended.series))
 
