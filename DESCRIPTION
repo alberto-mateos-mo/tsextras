@@ -5,7 +5,7 @@ Authors@R:
     person(given = "David Alberto",
            family = "Mateos Montes de Oca",
            role = c("aut", "cre"),
-           email = "",
+           email = "davidmateos311@ciencias.unam.mx",
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: What the package does (one paragraph).
 Imports:
