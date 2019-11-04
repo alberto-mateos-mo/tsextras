@@ -1,11 +1,11 @@
 #' Time Series beautiful plots
 #'
 #' This function creates a plot for a time series object using different engines. Corresponding libraries will be loaded.
-#' @param x A time series
+#' @param x A time series.
 #' @param interactive Set to FALSE for base R and ggplot2 plots and TRUE for plotly and highcharter. Defaults to TRUE.
 #' @param engine library to be used to create the plot, can be any of "base" "ggplot", "plotly" and "highcharter". Defaults to "ggplot".
-#' @author David Alberto Mateos Montes de Oca
-#' @keywords plot, timeseries, ts
+#' @author David Alberto Mateos Montes de Oca.
+#' @keywords plot, timeseries, ts.
 #' @export
 #' @examples
 #' x <- AirPassengers
