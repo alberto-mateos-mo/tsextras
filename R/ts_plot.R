@@ -1,11 +1,11 @@
-#' Time Series beautiful plots
+#' Time Series Beautiful Plots
 #'
 #' This function creates a plot for a time series object using different engines. Corresponding libraries will be loaded.
 #' @param x A time series.
 #' @param interactive Set to FALSE for base R and ggplot2 plots and TRUE for plotly and highcharter. Defaults to TRUE.
-#' @param engine library to be used to create the plot, can be any of "base" "ggplot", "plotly" and "highcharter". Defaults to "ggplot".
+#' @param engine Library to be used to create the plot, can be any of "base" "ggplot", "plotly" and "highcharter". Defaults to "ggplot".
 #' @author David Alberto Mateos Montes de Oca.
-#' @keywords plot, timeseries, ts.
+#' @keywords timeseries, ts.
 #' @export
 #' @examples
 #' x <- AirPassengers
@@ -16,10 +16,10 @@ ts_plot <- function(x, interactive = F, engine ="ggplot"){
 
   if(class(x) != "ts") stop("ts class object needed")
 
-  # require(ggplot2, quietly = TRUE)
-  # require(plotly, quietly = TRUE)
-  # require(highcharter, quietly = TRUE)
-  # require(dygraphs, quietly = TRUE)
+  require(ggplot2, quietly = TRUE)
+  require(plotly, quietly = TRUE)
+  require(highcharter, quietly = TRUE)
+  require(dygraphs, quietly = TRUE)
 
   a <- paste(start(x)[1], start(x)[2],1, sep = "/") %>% ymd()
   b <- paste(end(x)[1], end(x)[2],1, sep = "/") %>% ymd()
@@ -38,7 +38,6 @@ ts_plot <- function(x, interactive = F, engine ="ggplot"){
     gg <- data.frame(fecha = fecha, serie = as.numeric(as.vector(x))) %>%
       ggplot()+
       geom_line(aes(x = fecha, y = serie))+
-      geom_smooth(aes(x = fecha, y = serie), se = F)+
       geom_point(aes(x = fecha, y = serie))+
       theme_minimal()+
       labs(x = "", y = "")
