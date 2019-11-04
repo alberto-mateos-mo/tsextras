@@ -16,10 +16,10 @@ ts_plot <- function(x, interactive = F, engine ="ggplot"){
 
   if(class(x) != "ts") stop("ts class object needed")
 
-  require(ggplot2, quietly = TRUE)
-  require(plotly, quietly = TRUE)
-  require(highcharter, quietly = TRUE)
-  require(dygraphs, quietly = TRUE)
+  # require(ggplot2, quietly = TRUE)
+  # require(plotly, quietly = TRUE)
+  # require(highcharter, quietly = TRUE)
+  # require(dygraphs, quietly = TRUE)
 
   a <- paste(start(x)[1], start(x)[2],1, sep = "/") %>% ymd()
   b <- paste(end(x)[1], end(x)[2],1, sep = "/") %>% ymd()
