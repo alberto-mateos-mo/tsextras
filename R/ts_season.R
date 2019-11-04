@@ -8,7 +8,6 @@
 #' @author David Alberto Mateos Montes de Oca.
 #' @keywords ts, timeseries, seasonality.
 #' @export
-#' @import dplyr lubridate ggplot2
 #' @examples
 #'  s <- AirPassengers
 #'  x <- ts_trend(s)
