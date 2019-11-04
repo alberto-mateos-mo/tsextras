@@ -7,6 +7,7 @@
 #' @author David Alberto Mateos Montes de Oca.
 #' @keywords timeseries, ts.
 #' @export
+#' @import ggplot2 plotly highcharter dplyr lubridate dygraphs
 #' @examples
 #' x <- AirPassengers
 #' ts_plot(x)

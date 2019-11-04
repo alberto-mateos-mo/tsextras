@@ -13,6 +13,7 @@
 #' @author David Alberto Mateos Montes de Oca
 #' @keywords ts, timeseries, trend
 #' @export
+#' @import dplyr lubridate ggplot2
 #' @examples
 #'  x <- AirPassengers
 #'  ts_trend(x)
