@@ -6,6 +6,7 @@
 #' @param plot Whether to plot the trend or not. Defaults to TRUE.
 #' @param detrend Whether to remove the calculated trend from the time series or not. TRUE needed to use with ts_season(). Defaults to TRUE.
 #' @param detrendPlot Whether to plot the detrended series. Defaults to FALSE.
+#' @param type Type of de decomposition, either "additive" or "multiplicative". Defaults to "additive".
 #' @details The moving average smoother averages the nearest order periods of each observation.
 #' @seealso ma()
 #' @return If either plot or detrendPlot a list containing the series and the plots, otherwise a list containing the trend and the order of the moving average.

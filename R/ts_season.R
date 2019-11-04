@@ -3,6 +3,7 @@
 #' Extracts and plot the seasonality component of a time series
 #' @param x A list returned by ts_trend().
 #' @param plot Whether to plot or not the seasonal component. Defaults to TRUE.
+#' @param random Whether to calculate random component or not
 #' @seealso decompose().
 #' @author David Alberto Mateos Montes de Oca.
 #' @keywords ts, timeseries, seasonality.

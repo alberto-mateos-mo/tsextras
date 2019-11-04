@@ -2,16 +2,16 @@
 % Please edit documentation in R/ts_plot.R
 \name{ts_plot}
 \alias{ts_plot}
-\title{Time Series beautiful plots}
+\title{Time Series Beautiful Plots}
 \usage{
 ts_plot(x, interactive = F, engine = "ggplot")
 }
 \arguments{
-\item{x}{A time series}
+\item{x}{A time series.}
 
 \item{interactive}{Set to FALSE for base R and ggplot2 plots and TRUE for plotly and highcharter. Defaults to TRUE.}
 
-\item{engine}{library to be used to create the plot, can be any of "base" "ggplot", "plotly" and "highcharter". Defaults to "ggplot".}
+\item{engine}{Library to be used to create the plot, can be any of "base" "ggplot", "plotly" and "highcharter". Defaults to "ggplot".}
 }
 \description{
 This function creates a plot for a time series object using different engines. Corresponding libraries will be loaded.
@@ -21,8 +21,7 @@ x <- AirPassengers
 ts_plot(x)
 }
 \author{
-David Alberto Mateos Montes de Oca
+David Alberto Mateos Montes de Oca.
 }
-\keyword{plot,}
 \keyword{timeseries,}
-\keyword{ts}
+\keyword{ts.}

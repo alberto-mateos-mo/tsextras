@@ -10,6 +10,8 @@ ts_season(x, plot = TRUE, random = TRUE)
 \item{x}{A list returned by ts_trend().}
 
 \item{plot}{Whether to plot or not the seasonal component. Defaults to TRUE.}
+
+\item{random}{Whether to calculate random component or not}
 }
 \description{
 Extracts and plot the seasonality component of a time series
