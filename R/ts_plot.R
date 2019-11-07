@@ -16,8 +16,8 @@ ts_plot <- function(x, interactive = F, engine ="ggplot"){
 
   if(class(x) != "ts") stop("ts class object needed")
 
-  a <- paste(start(x)[1], start(x)[2],1, sep = "/") %>% ymd()
-  b <- paste(end(x)[1], end(x)[2],1, sep = "/") %>% ymd()
+  a <- (paste(start(x)[1], 1, 1, sep = "/") %>% ymd())+(start(x)[2]-1)
+  b <- (paste(end(x)[1], 1, 1, sep = "/") %>% ymd())+(end(x)[2]-1)
 
   ifelse(sum(start(x)) == 2,
          fecha <- 1:length(x),
