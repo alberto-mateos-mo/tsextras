@@ -25,8 +25,8 @@ ts_trend <- function(x, order = 5, plot = T, detrend = T, detrendPlot = F, type 
 
   ts_t <- ma(x, order = order, centre = T)
 
-  a <- paste(start(x)[1], start(x)[2],1, sep = "/") %>% ymd()
-  b <- paste(end(x)[1], end(x)[2],1, sep = "/") %>% ymd()
+  a <- (paste(start(x)[1], 1, 1, sep = "/") %>% ymd())+(start(x)[2]-1)
+  b <- (paste(end(x)[1], 1, 1, sep = "/") %>% ymd())+(end(x)[2]-1)
 
   ifelse(sum(start(x)) == 2,
          fecha <- 1:length(x),
