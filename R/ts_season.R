@@ -18,8 +18,8 @@ ts_season <- function(x, plot = TRUE, random = TRUE) {
   if(class(x) != "list") stop("List returned by ts_trend function needed")
   if(!"detrended.series" %in% names(x)) stop("Detrended series not found")
 
-  a <- (paste(start(x$trend.series)[1], 1, 1, sep = "/") %>% ymd())+(start(x$trend.series)[2]-1)
-  b <- (paste(end(x$trend.series)[1], 1, 1, sep = "/") %>% ymd())+(end(x$trend.series)[2]-1)
+  a <- (paste(start(x$trend.series)[1], 1, 1, sep = "/") %>% lubridate::ymd())+(start(x$trend.series)[2]-1)
+  b <- (paste(end(x$trend.series)[1], 1, 1, sep = "/") %>% lubridate::ymd())+(end(x$trend.series)[2]-1)
 
   ifelse(sum(start(x$trend.series)) == 2,
          fecha <- 1:length(x$trend.series),

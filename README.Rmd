@@ -1,0 +1,63 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# tsextras
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+<!-- badges: end -->
+
+The goal of tsextras is to provide helper functions to analyse time series objects.
+
+## Installation
+
+You can install the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("alberto-mateos-mo/tsextras")
+```
+
+## Example
+
+`ts_plot()` function is a wrapper for other functions that plot ts objects.
+
+```{r example}
+library(tsextras)
+library(ggplot2)
+
+ts_plot(AirPassengers)
+```
+
+`ts_trend()` extracts and plots the trend of a time series.
+
+```{r}
+library(tsextras)
+library(ggplot2)
+
+ts_trend(AirPassengers, order = 12)
+```
+
+`ts_season()` extracts and plots seasonal component of a time series.
+
+```{r}
+library(tsextras)
+library(ggplot2)
+
+s <- AirPassengers
+x <- ts_trend(s)
+ts_season(x)
+```
+

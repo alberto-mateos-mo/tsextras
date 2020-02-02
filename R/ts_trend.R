@@ -23,10 +23,10 @@ ts_trend <- function(x, order = 5, plot = T, detrend = T, detrendPlot = F, type 
   if(class(x) != "ts") stop("ts class object needed")
   if(detrend == F & detrendPlot == T) stop("Set detrend to TRUE in order to plot it")
 
-  ts_t <- ma(x, order = order, centre = T)
+  ts_t <- forecast::ma(x, order = order, centre = T)
 
-  a <- (paste(start(x)[1], 1, 1, sep = "/") %>% ymd())+(start(x)[2]-1)
-  b <- (paste(end(x)[1], 1, 1, sep = "/") %>% ymd())+(end(x)[2]-1)
+  a <- (paste(start(x)[1], 1, 1, sep = "/") %>% lubridate::ymd())+(start(x)[2]-1)
+  b <- (paste(end(x)[1], 1, 1, sep = "/") %>% lubridate::ymd())+(end(x)[2]-1)
 
   ifelse(sum(start(x)) == 2,
          fecha <- 1:length(x),
